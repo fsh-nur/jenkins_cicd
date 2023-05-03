@@ -9,7 +9,7 @@ Jenkins is a DevOps tool where central build and continous integration takes pla
 
 ![image](https://user-images.githubusercontent.com/129324316/235731482-e0536549-2da0-47d1-b997-ceb3b5e19a63.png)
 
-# CI test integration
+# CI test integration testing
 
 
 # What is the diff between continuous delivery CD and Continuous deployment CDE
