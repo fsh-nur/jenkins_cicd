@@ -74,8 +74,43 @@ Have the `app` folder in a repository where the `test` folder is.
 
 ![8](https://user-images.githubusercontent.com/129324316/235756445-6456788c-2345-4ad6-b4c0-c6c1218b78e8.png)
 
+## Setting up Webhooks
+
+1. Create a webhook in your repo settings
+
+![webhook crsat1](https://user-images.githubusercontent.com/129324316/235934928-96d79eb2-3be4-4e92-9cf6-c5acb0f973c3.png)
+
+2. Once created you should see reponse 200 if sucessful
+
+![2 resposnse 2000](https://user-images.githubusercontent.com/129324316/235935095-208d2bf2-8ea3-462d-9568-529fd055e440.png)
+
+3.  Configure your task in Jenkins
 
 
+![4 configure](https://user-images.githubusercontent.com/129324316/235935252-1614e86a-e0ea-4e77-9a59-839c722e57c6.png)
+
+4. Build trigger for GitHub
+
+![5 build trigger for github](https://user-images.githubusercontent.com/129324316/235935331-0ef76fa6-4f68-4e63-b6bc-3490941f3345.png)
+
+5. Now make a change in your file and push it to GitHub
+
+![3 make a change in test integration](https://user-images.githubusercontent.com/129324316/235935500-49d35c10-b2ca-4878-aa0a-c93e8684b26c.png)
+
+6. Now you should see the build automatically pending here:
+
+![6 build triggered](https://user-images.githubusercontent.com/129324316/235935638-89eb8fa6-bd90-4177-b218-7d66605c90cc.png)
+
+7. Here you will have triggered an automatic change to GitHub
+
+![7 triggered an automatic change to github](https://user-images.githubusercontent.com/129324316/235935719-e5db72e2-4802-494d-a2b6-e1a64e8a3293.png)
 
 
+## Creating a Dev Branch and running tests
+
+1. Create a new task in Jenkins
+2. Use your previous 
+
+
+## Merge Dev 
 
