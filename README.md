@@ -1,4 +1,4 @@
-# CI MERGE
+# CI MERGE - Jenkins
 # What is Jenkins as well as as what other tools available 
 
 Jenkins is a DevOps tool where central build and continous integration takes place. It is an open-source automation server and is a Java based program. It allows us to automate parts of the development process. 
