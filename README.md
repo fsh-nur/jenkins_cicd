@@ -105,12 +105,37 @@ Have the `app` folder in a repository where the `test` folder is.
 
 ![7 triggered an automatic change to github](https://user-images.githubusercontent.com/129324316/235935719-e5db72e2-4802-494d-a2b6-e1a64e8a3293.png)
 
-
 ## Creating a Dev Branch and running tests
 
-1. Create a new task in Jenkins
-2. Use your previous 
+1. Create a new task in Jenkins using you rprevious task as a template.
+2. Scroll down and change the branch to `dev` here: 
+
+![1  dev branch](https://user-images.githubusercontent.com/129324316/235939347-3f9863e6-3e4c-4122-80d5-90aae55a1df9.png)
 
 
-## Merge Dev 
+3. Create a dev branch in your local host:
+
+```
+git checkout- b dev
+```
+4. Make a change to one of the files
+5. Commit and push the changes
+6. You should see that the build is already run in Jenkins automatically
+
+
+## Merge `dev` to `main` branch
+
+Prerequisites: 
+- Make sure that your key you have deployed in your repo has read/write access
+
+
+1. Create a new task where the `dev` branch is tracked like the previous steps
+2. Enter the following the in the build scripts- this will automatically merge the dev branch to main branch:
+
+![2  build scrip](https://user-images.githubusercontent.com/129324316/235941908-65c1a059-772b-4301-9a54-2f00b4a7c0c8.png)
+
+3. Next, selct your post-build actions and select `Git Publisher` **make sure to select push only if build succeeds**
+
+
+![3  git popublisher](https://user-images.githubusercontent.com/129324316/235943595-8616092b-6e79-4ed1-b250-10fe6ff018ea.png)
 
