@@ -134,8 +134,35 @@ Prerequisites:
 
 ![2  build scrip](https://user-images.githubusercontent.com/129324316/235941908-65c1a059-772b-4301-9a54-2f00b4a7c0c8.png)
 
-3. Next, selct your post-build actions and select `Git Publisher` **make sure to select push only if build succeeds**
+3. Next, selct your post-build actions and select `Git Publisher` **make sure to select push only if build succeeds** and enable `Merge Results`
 
 
 ![3  git popublisher](https://user-images.githubusercontent.com/129324316/235943595-8616092b-6e79-4ed1-b250-10fe6ff018ea.png)
+
+4. Select `Build Now` in order to test the build manually. 
+
+5. Now  in order to push **only** if tests are successful, return to your first `CI` task where we triggered the tests to run, and select `Post Build Actions` and select `Build Other Projects`. Input your recent project were `dev` is merged to `main`, and select `Trigger only if build is stable` so only if the tests are successful, code in dev branch will consequently merge with the main branch.
+
+
+## Creating a CI/CD Pipeline using an EC2 Instance
+
+1. Launch your `app` instance using the AMI for the app. Add the Port for Jenkins to allow it on `port 8080`
+2. Create a new task in Jenkins
+3. Make sure `GitHub Gook Trigger` is selected
+4. Select `ssh agent` in the build environment and add your pem file created earlier.
+5. Output and execute a shell script to automate the running of the app:
+
+```
+scp -v -r -o StrictHostKeyChecking=no app/ ubuntu@52.14.22.205:/home/ubuntu/
+ssh -A -o StrictHostKeyChecking=no ubuntu@52.14.22.205 <<EOF
+#sudo apt install clear#
+
+cd app
+#sudo npm install pm2 -g
+# pm2 kill
+nohup node app.js > /dev/null 2>&1 &
+```
+
+6. Click `Save`
+7. Any changes made to the app code and is pushed will be update on the EC2 Instance.
 
