@@ -37,9 +37,22 @@ systemctl status jenkins.service
 ```
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
+
+
+![image](https://user-images.githubusercontent.com/129324316/236303715-a61133fd-a197-4484-b2cc-9a926b318ea0.png)
+
+
+
 10. Select `Install suggested plugins`
-11. You may skip this and continue as administrator at this point, or create a user.
-12. Click `Available plugins` and select the following extensions make sure you choose `Install without restart` each time =>
+
+
+![image](https://user-images.githubusercontent.com/129324316/236303818-36f6f86f-1c09-4a74-a1aa-3f145f96e094.png)
+
+12. You may skip this and continue as administrator at this point, or create a user.
+13. Click `Available plugins` and select the following extensions make sure you choose `Install without restart` each time =>
+
+
+![image](https://user-images.githubusercontent.com/129324316/236303852-4b6ef13d-9e8f-4c92-8c8a-3bd4b12db4e0.png)
 
 
 - Amazon EC2 Plugin
@@ -61,8 +74,13 @@ Kind: AWS Credentials
 ```
 16. Select your rehion as `eu-west-1`
 17. under EC2 Pair's Pribvate Key select Jenkins, as well as `SSH username th private key` and name is under `tech221_pem`. This is where the pem file will end up going. Select `Enter Directly` under Private key then add your pem file. 
-18. 18 Test the connection if successful then save.
-19. Now we have the Jenkins dashboard and we have downloaded all extensions we may begin to create our Jobs such as starting our Sparta App, where we will create an instance similar to previous steps, however allow the jenkins server IP SSH into the Sparta App Instance to allow us to build a pipeline.
+
+
+![image](https://user-images.githubusercontent.com/129324316/236303925-fccfb190-648c-4a41-abeb-4f0bacafa66b.png)
+
+
+18. Test the connection if successful then save.
+20. Now we have the Jenkins dashboard and we have downloaded all extensions we may begin to create our Jobs such as starting our Sparta App, where we will create an instance similar to previous steps, however allow the jenkins server IP SSH into the Sparta App Instance to allow us to build a pipeline.
 
 
 
