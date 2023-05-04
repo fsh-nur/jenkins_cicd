@@ -17,7 +17,7 @@
  sudo apt install openjdk-11-jre
 
 ```
-8. Install Jenkins into your instance according to your Ubuntu version. E.g for 20.04 follow these commands:
+7. Install Jenkins into your instance according to your Ubuntu version. E.g for 20.04 follow these commands:
 
 ```
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
